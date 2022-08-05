@@ -1,15 +1,16 @@
-import React from 'react'
-import PlayerInfo from "./PlayerInfo"
+import React from "react";
+import PlayerInfo from "./PlayerInfo";
 
-export default function Player() {
-    const style = {
-        border: '2px solid black',
-        padding: "2px",
-    }
+export default function Player({ tricksWon, pfp }) {
+  const style = {
+    border: "2px solid black",
+    padding: "2px",
+  };
   return (
     <div style={style}>
-        Player
-        <PlayerInfo />
+      Player
+      <br />
+      <PlayerInfo name="Tom" tricksWon={tricksWon} pfp={pfp} team="blue" />
     </div>
-  )
+  );
 }

@@ -8,7 +8,11 @@ function App() {
       Hello World
       <Player />
       <br />
-      <Card />
+      <Card 
+        suit="hearts"
+        rank="q"
+      />
+
     </div>
   );
 }

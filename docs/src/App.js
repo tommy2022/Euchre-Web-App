@@ -7,6 +7,18 @@ import { GiHumanPyramid } from "react-icons/gi";
 import Player from "./Components/Player";
 import PlayerInfo from "./Components/PlayerInfo";
 import Card from "./Components/Card";
+import {
+  NINE,
+  TEN,
+  JACK,
+  QUEEN,
+  KING,
+  ACE,
+  HEARTS,
+  SPADES,
+  CLUBS,
+  DIAMONDS,
+} from "./Constants";
 
 function App() {
   const pfps = {
@@ -24,11 +36,10 @@ function App() {
       <PlayerInfo name="Doggo" tricksWon={2} pfp={pfps.dog} team="blue" />
       <PlayerInfo name="King Boo" tricksWon={1} pfp={pfps.ghost} team="red" />
       <br />
-      <Card 
-        suit="hearts"
-        rank="q"
-      />
-
+      <Card suit={HEARTS} rank={QUEEN} />
+      <Card suit={SPADES} rank={ACE} />
+      <Card suit={DIAMONDS} rank={KING} />
+      <Card suit={CLUBS} rank={JACK} />
     </div>
   );
 }

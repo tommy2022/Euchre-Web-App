@@ -24,7 +24,11 @@ function App() {
       <PlayerInfo name="Doggo" tricksWon={2} pfp={pfps.dog} team="blue" />
       <PlayerInfo name="King Boo" tricksWon={1} pfp={pfps.ghost} team="red" />
       <br />
-      <Card />
+      <Card 
+        suit="hearts"
+        rank="q"
+      />
+
     </div>
   );
 }

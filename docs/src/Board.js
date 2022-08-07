@@ -20,16 +20,15 @@ import {
   DIAMONDS,
 } from "./Constants";
 
-function App() {
+function Board() {
   const pfps = {
     ghost: CgGhostCharacter,
     cat: IoLogoOctocat,
     dog: SiDatadog,
     human: GiHumanPyramid,
   };
-  const ghost = () => <h2>Hi</h2>;
   return (
-    <div className="App">
+    <div className="Board">
       Hello World
       <Player pfp={pfps.human} tricksWon={2} />
       <PlayerInfo name="Kitty" tricksWon={1} pfp={pfps.cat} team="red" />
@@ -44,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default Board;

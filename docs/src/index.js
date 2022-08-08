@@ -2,13 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Board from "./Board";
 import Header from "./Header";
+import Home from "./Home";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Container } from "@chakra-ui/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <Board />
+    <BrowserRouter>
+      <Header />
+      <Container h="calc(100vh - 40px)">
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/play" element={<Board />} />
+        </Routes>
+      </Container>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
